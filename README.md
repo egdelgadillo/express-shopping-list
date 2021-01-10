@@ -2,7 +2,7 @@
 
 Hello World-style Express.JS CRUD shopping list application. Proof-of-concept application using the Express.JS framework on Node.JS and Handlebars as HTML template handler, and MongoDB as a database. The application was deployed to Heroku and the database was deployed on cloud.mongodb.com
 
-[Live Demo](https://expresscompras.herokuapp.com/)
+[Live Demo](https://expressshoppinglist.herokuapp.com/)
 
 ## Contents
 
@@ -199,6 +199,18 @@ Push the code to the Heroku Cloud
 
 ```bash
 git push heroku master
+```
+
+Export the environment variables to the Heroku app
+
+```bash
+heroku config:set MONGO_USERNAME=<YOUR-MONGODB-ATLAS-USERNAME>
+
+heroku config:set MONGO_PASSWORD=<YOUR-MONGODB-ATLAS-PASSWORD>
+
+heroku config:set MONGO_URL=<YOUR-MONGODB-ATLAS-CLUSTER-URL>
+
+heroku config:set MONGO_DB=<YOUR-MONGODB-ATLAS-DATABASE-NAME>
 ```
 
 Open the deployed application
