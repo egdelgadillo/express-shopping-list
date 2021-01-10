@@ -1,6 +1,6 @@
 # express-shopping-list
 
-Hello World-style Express.JS CRUD shopping list application. Proof-of-concept application using the Express.JS framework on Node.JS and Handlebars as HTML template handler, and MongoDB as a database. The application was deployed to Heroku and the database was deployed on cloud.mongodb.com
+Javascript-only Hello World-style Express.JS CRUD shopping list application. Proof-of-concept application using the Express.JS framework on Node.JS and Handlebars as HTML template handler, and MongoDB as a database. The application was deployed to Heroku and the database was deployed on cloud.mongodb.com
 
 [Live Demo](https://expressshoppinglist.herokuapp.com/)
 
