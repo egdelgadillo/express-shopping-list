@@ -1,40 +1,41 @@
 <div class="">
     <br>
-    <h1>Compras</h1>
+    <h1>Shopping List</h1>
     <br>
-    <a class="btn btn-primary" href="/compras/nueva">Nueva entrada</a>
+    <a class="btn btn-primary" href="/shoppingList/new">New Shopping List Item</a>
     <br>
     <br>
     <br>
     <table class="table table-strip">
         <thead>
             <tr>
-                <td>Categoria</td>
-                <td>Nombre</td>
-                <td>Precio Estimado</td>
+                <td>Category</td>
+                <td>Name</td>
+                <td>Estimated Price</td>
                 <td colspan="2">
-                    <select name="categoria" id="categoria" class="form-control" onchange="if (this.selectedIndex) window.location='/' + this.value">
-                        <option value="-1">Seleccione un Fitro...</option>
-                        {{#each categorias}}
-                            <option value="{{this.nombre}}">{{this.nombre}}</option>
+                    <select name="category" id="category" class="form-control"
+                        onchange="if (this.selectedIndex) window.location='/' + this.value">
+                        <option value="-1">Select a Filter...</option>
+                        {{#each categories}}
+                        <option value="{{this.name}}">{{this.name}}</option>
                         {{/each}}
                     </select>
                 </td>
             </tr>
         </thead>
         <tbody>
-            {{#each compras}}
-                <tr>
-                    <td>{{this.categoria}}</td>
-                    <td>{{this.nombre}}</td>
-                    <td>${{this.precioEstimado}}</td>
-                    <td><a href="/compras/modificar/{{this._id}}">Modificar</a></td>
-                    <td><a href="/compras/eliminar/{{this._id}}">Eliminar</a></td>
-                </tr>
+            {{#each shoppingList}}
+            <tr>
+                <td>{{this.category}}</td>
+                <td>{{this.name}}</td>
+                <td>${{this.estimatedPrice}}</td>
+                <td><a href="/shoppingList/update/{{this._id}}">Modify</a></td>
+                <td><a href="/shoppingList/remove/{{this._id}}">Delete</a></td>
+            </tr>
             {{/each}}
             <tr>
                 <td><strong>Items: {{total}}</strong></td>
-                <td colspan="4"><strong>Precio Estimado Total: ${{precioTotal}}</strong></td>
+                <td colspan="4"><strong>Total Estimated Price: ${{totalEstimatedPrice}}</strong></td>
 
             </tr>
         </tbody>

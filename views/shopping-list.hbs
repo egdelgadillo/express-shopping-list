@@ -1,0 +1,30 @@
+<br>
+<a href="/" class="btn btn-primary">Back</a>
+<br>
+<br>
+<br>
+<form action="/shoppingList/new" method="POST">
+    <input type="text" name="_id" value="{{shoppingListItem._id}}" hidden>
+
+    <div class="form-group">
+        <label for="category">Category:</label>
+        <select name="category" id="category" class="form-control">
+            {{#each categories}}
+            <option value="{{this.name}}">{{this.name}}</option>
+            {{/each}}
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="name">Name:</label>
+        <input class="form-control" type="text" name="name" , id="name" value="{{shoppingListItem.name}}">
+    </div>
+
+    <div class="form-group">
+        <label for="estimatedPrice">Estimated Price:</label>
+        <input class="form-control" type="number" name="estimatedPrice" , id="estimatedPrice"
+            value="{{shoppingListItem.estimatedPrice}}">
+    </div>
+
+    <button class="btn btn-block btn-success" type="submit">Save</button>
+</form>
